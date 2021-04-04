@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "ControleOKR.Repository/1.0.0": {
+        "dependencies": {
+          "ControleOKR.Domain": "1.0.0"
+        },
+        "runtime": {
+          "ControleOKR.Repository.dll": {}
+        }
+      },
+      "ControleOKR.Domain/1.0.0": {
+        "runtime": {
+          "ControleOKR.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ControleOKR.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ControleOKR.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,12 @@
+C:\Users\Camila\Documents\COISAS RAFAEL\Workspace-codigos\api-okrs\ControleOKR.Domain\bin\Debug\net5.0\ControleOKR.Domain.deps.json
+C:\Users\Camila\Documents\COISAS RAFAEL\Workspace-codigos\api-okrs\ControleOKR.Domain\bin\Debug\net5.0\ControleOKR.Domain.dll
+C:\Users\Camila\Documents\COISAS RAFAEL\Workspace-codigos\api-okrs\ControleOKR.Domain\bin\Debug\net5.0\ref\ControleOKR.Domain.dll
+C:\Users\Camila\Documents\COISAS RAFAEL\Workspace-codigos\api-okrs\ControleOKR.Domain\bin\Debug\net5.0\ControleOKR.Domain.pdb
+C:\Users\Camila\Documents\COISAS RAFAEL\Workspace-codigos\api-okrs\ControleOKR.Domain\obj\Debug\net5.0\ControleOKR.Domain.csprojAssemblyReference.cache
+C:\Users\Camila\Documents\COISAS RAFAEL\Workspace-codigos\api-okrs\ControleOKR.Domain\obj\Debug\net5.0\ControleOKR.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Camila\Documents\COISAS RAFAEL\Workspace-codigos\api-okrs\ControleOKR.Domain\obj\Debug\net5.0\ControleOKR.Domain.AssemblyInfoInputs.cache
+C:\Users\Camila\Documents\COISAS RAFAEL\Workspace-codigos\api-okrs\ControleOKR.Domain\obj\Debug\net5.0\ControleOKR.Domain.AssemblyInfo.cs
+C:\Users\Camila\Documents\COISAS RAFAEL\Workspace-codigos\api-okrs\ControleOKR.Domain\obj\Debug\net5.0\ControleOKR.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Camila\Documents\COISAS RAFAEL\Workspace-codigos\api-okrs\ControleOKR.Domain\obj\Debug\net5.0\ControleOKR.Domain.dll
+C:\Users\Camila\Documents\COISAS RAFAEL\Workspace-codigos\api-okrs\ControleOKR.Domain\obj\Debug\net5.0\ref\ControleOKR.Domain.dll
+C:\Users\Camila\Documents\COISAS RAFAEL\Workspace-codigos\api-okrs\ControleOKR.Domain\obj\Debug\net5.0\ControleOKR.Domain.pdb

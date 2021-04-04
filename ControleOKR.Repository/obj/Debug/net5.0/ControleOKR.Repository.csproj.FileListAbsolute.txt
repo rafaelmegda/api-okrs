@@ -1,0 +1,15 @@
+C:\Users\Camila\Documents\COISAS RAFAEL\Workspace-codigos\api-okrs\ControleOKR.Repository\bin\Debug\net5.0\ControleOKR.Repository.deps.json
+C:\Users\Camila\Documents\COISAS RAFAEL\Workspace-codigos\api-okrs\ControleOKR.Repository\bin\Debug\net5.0\ControleOKR.Repository.dll
+C:\Users\Camila\Documents\COISAS RAFAEL\Workspace-codigos\api-okrs\ControleOKR.Repository\bin\Debug\net5.0\ref\ControleOKR.Repository.dll
+C:\Users\Camila\Documents\COISAS RAFAEL\Workspace-codigos\api-okrs\ControleOKR.Repository\bin\Debug\net5.0\ControleOKR.Repository.pdb
+C:\Users\Camila\Documents\COISAS RAFAEL\Workspace-codigos\api-okrs\ControleOKR.Repository\bin\Debug\net5.0\ControleOKR.Domain.dll
+C:\Users\Camila\Documents\COISAS RAFAEL\Workspace-codigos\api-okrs\ControleOKR.Repository\bin\Debug\net5.0\ControleOKR.Domain.pdb
+C:\Users\Camila\Documents\COISAS RAFAEL\Workspace-codigos\api-okrs\ControleOKR.Repository\obj\Debug\net5.0\ControleOKR.Repository.csprojAssemblyReference.cache
+C:\Users\Camila\Documents\COISAS RAFAEL\Workspace-codigos\api-okrs\ControleOKR.Repository\obj\Debug\net5.0\ControleOKR.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Camila\Documents\COISAS RAFAEL\Workspace-codigos\api-okrs\ControleOKR.Repository\obj\Debug\net5.0\ControleOKR.Repository.AssemblyInfoInputs.cache
+C:\Users\Camila\Documents\COISAS RAFAEL\Workspace-codigos\api-okrs\ControleOKR.Repository\obj\Debug\net5.0\ControleOKR.Repository.AssemblyInfo.cs
+C:\Users\Camila\Documents\COISAS RAFAEL\Workspace-codigos\api-okrs\ControleOKR.Repository\obj\Debug\net5.0\ControleOKR.Repository.csproj.CoreCompileInputs.cache
+C:\Users\Camila\Documents\COISAS RAFAEL\Workspace-codigos\api-okrs\ControleOKR.Repository\obj\Debug\net5.0\ControleOKR.Repository.csproj.CopyComplete
+C:\Users\Camila\Documents\COISAS RAFAEL\Workspace-codigos\api-okrs\ControleOKR.Repository\obj\Debug\net5.0\ControleOKR.Repository.dll
+C:\Users\Camila\Documents\COISAS RAFAEL\Workspace-codigos\api-okrs\ControleOKR.Repository\obj\Debug\net5.0\ref\ControleOKR.Repository.dll
+C:\Users\Camila\Documents\COISAS RAFAEL\Workspace-codigos\api-okrs\ControleOKR.Repository\obj\Debug\net5.0\ControleOKR.Repository.pdb
