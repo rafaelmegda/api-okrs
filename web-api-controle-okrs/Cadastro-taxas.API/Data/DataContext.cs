@@ -8,10 +8,11 @@ namespace Cadastro_taxas.API.Data
         public DataContext(DbContextOptions<DataContext>options) : base (options)
         {
         }
-        public DbSet<EmpresaOKR> EmpresaOKR { get; set; }
-        public DbSet<KeyResult> Atividades_Chaves { get; set; }
-        public DbSet<AtividadeKeyResult> Atividades_Resultados_Chaves { get; set; }
-        public DbSet<ObjectKeyResult> Resultado_Objetos_Chaves { get; set; }
-        public DbSet<PlanejamentoMeta> Planejamento_Metas { get; set; }
+        public DbSet<Empresa> EMPRESAS { get; set; }
+        public DbSet<ControleDeOKR> CONTROLE_OKRS { get; set; }
+        public DbSet<Objetivo> OBJETIVOS { get; set; }
+        public DbSet<PlanejamentoMetaObjetivos> PLANEJAMENTO_METAS_DOS_OBJETIVOS { get; set; }
+        public DbSet<ResultadoChave> RESULTADO_CHAVE { get; set; }
+        public DbSet<ResultadoChaveAtividade> RESULTADO_CHAVE_ATIVIDADE { get; set; }
     }
 }
