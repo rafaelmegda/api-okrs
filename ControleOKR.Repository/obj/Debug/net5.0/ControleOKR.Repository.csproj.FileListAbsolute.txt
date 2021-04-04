@@ -13,3 +13,6 @@ C:\Users\Camila\Documents\COISAS RAFAEL\Workspace-codigos\api-okrs\ControleOKR.R
 C:\Users\Camila\Documents\COISAS RAFAEL\Workspace-codigos\api-okrs\ControleOKR.Repository\obj\Debug\net5.0\ControleOKR.Repository.dll
 C:\Users\Camila\Documents\COISAS RAFAEL\Workspace-codigos\api-okrs\ControleOKR.Repository\obj\Debug\net5.0\ref\ControleOKR.Repository.dll
 C:\Users\Camila\Documents\COISAS RAFAEL\Workspace-codigos\api-okrs\ControleOKR.Repository\obj\Debug\net5.0\ControleOKR.Repository.pdb
+C:\Users\Camila\Documents\COISAS RAFAEL\Workspace-codigos\api-okrs\ControleOKR.Repository\bin\Debug\net5.0\ControleOKR.Repository.runtimeconfig.json
+C:\Users\Camila\Documents\COISAS RAFAEL\Workspace-codigos\api-okrs\ControleOKR.Repository\bin\Debug\net5.0\ControleOKR.Repository.runtimeconfig.dev.json
+C:\Users\Camila\Documents\COISAS RAFAEL\Workspace-codigos\api-okrs\ControleOKR.Repository\obj\Debug\net5.0\ControleOKR.Repository.genruntimeconfig.cache

@@ -1,5 +1,5 @@
 using System.Threading.Tasks;
-using Cadastro_taxas.API.Data;
+using ControleOKR.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -10,9 +10,9 @@ namespace Cadastro_taxas.API.Controllers
     [Route("api/[controller]")]
     public class PlanejamentoMetaObjetivosController : ControllerBase
     {
-         public readonly DataContext _context;
+         public readonly ControleOKRContext _context;
 
-        public PlanejamentoMetaObjetivosController(DataContext context)
+        public PlanejamentoMetaObjetivosController(ControleOKRContext context)
         {
             _context = context;
         }
@@ -22,7 +22,7 @@ namespace Cadastro_taxas.API.Controllers
        {
            try
            {
-                var results = await _context.PLANEJAMENTO_METAS_DOS_OBJETIVOS.ToListAsync();
+                var results = await _context.PlanejamentoMetasObjetivos.ToListAsync();
 
                 return Ok(results);
            }
@@ -38,7 +38,7 @@ namespace Cadastro_taxas.API.Controllers
        {
            try
            {
-                var results = await _context.PLANEJAMENTO_METAS_DOS_OBJETIVOS.FirstOrDefaultAsync(x => x.Id == id);
+                var results = await _context.PlanejamentoMetasObjetivos.FirstOrDefaultAsync(x => x.Id == id);
 
                 return Ok(results);
            }

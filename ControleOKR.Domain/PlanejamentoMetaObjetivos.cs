@@ -1,6 +1,6 @@
 using System;
 
-namespace Cadastro_taxas.API.Model
+namespace ControleOKR.Domain
 {
     public class PlanejamentoMetaObjetivos
     {

@@ -39,6 +39,9 @@ Criando as tabelas
 Criando o banco de dados
 > `dotnet ef database update`
 
+Removendo as Migrations
+> `dotnet ef migrations remove`
+
 Download SQLLiteDB Browser
 > http://sqlitebrowser.org/
 
