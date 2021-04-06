@@ -9,6 +9,8 @@ namespace ControleOKR.Domain
         public string DescricaoAtividade { get; set; }
         public double TotalConcluidoDaAtividade { get; set; }
         public int PesoDaAtividade { get; set; }
+        public int? ResultadoChaveId { get; set; }
+        public ResultadoChave ResultadoChave { get; set; }
                 
         //public int TotalConcluidoEmRelacaoAoPesoTotal { get; set; } não armazenar, calcular
 

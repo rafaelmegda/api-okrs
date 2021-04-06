@@ -9,15 +9,8 @@ namespace ControleOKR.Repository
         {
         }
         public DbSet<Empresa> Empresas { get; set; }
-        public DbSet<ControleDeOKR> ControleDeOKRs { get; set; }
         public DbSet<Objetivo> Objetivos { get; set; }
-        public DbSet<PlanejamentoMetaObjetivos> PlanejamentoMetasObjetivos { get; set; }
         public DbSet<ResultadoChave> ResultadosChaves { get; set; }
         public DbSet<ResultadoChaveAtividade> ResultadosChavesAtividades { get; set; }
-
-        //n para n
-        // protected override void OnModelCreating(){
-
-        // }
     }
 }

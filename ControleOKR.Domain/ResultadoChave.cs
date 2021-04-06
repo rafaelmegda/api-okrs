@@ -8,8 +8,8 @@ namespace ControleOKR.Domain
         public int Id { get; set; }
         public string DescricaoResultadoChave { get; set; }
         public string Reponsavel { get; set; }
-        public int? ResultadoChaveAtividadeId { get; set; }
-        public List<ResultadoChaveAtividade> AtividadesResultadoChave { get; set; }
+        public int? ObjetivoId { get; set; }
+        public Objetivo Objetivo { get; set; }
 
         //public int PesoTotalDaAtividadeSobreResultado { get; set; } fazer o calculo manualmente
         

@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ControleOKR.Repository.Migrations
 {
     [DbContext(typeof(ControleOKRContext))]
-    [Migration("20210404202540_init")]
+    [Migration("20210406005043_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -18,46 +18,19 @@ namespace ControleOKR.Repository.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.0.0");
 
-            modelBuilder.Entity("ControleOKR.Domain.ControleDeOKR", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int?>("EmpresaId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int?>("ObjetivoId")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ControleDeOKRs");
-                });
-
             modelBuilder.Entity("ControleOKR.Domain.Empresa", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("ControleDeOKRId")
-                        .HasColumnType("INTEGER");
-
                     b.Property<string>("NomeEmpresa")
                         .HasColumnType("TEXT");
-
-                    b.Property<int?>("ObjetivoId")
-                        .HasColumnType("INTEGER");
 
                     b.Property<string>("PropostaValor")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ControleDeOKRId");
-
-                    b.HasIndex("ObjetivoId");
 
                     b.ToTable("Empresas");
                 });
@@ -68,45 +41,23 @@ namespace ControleOKR.Repository.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("ControleDeOKRId")
-                        .HasColumnType("INTEGER");
+                    b.Property<DateTime>("DataParaMeta")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("DefinicaoObjetivo")
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("PlanejamentoMetaObjetivosId")
+                    b.Property<int?>("EmpresaId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("ResultadoChaveId")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ControleDeOKRId");
-
-                    b.ToTable("Objetivos");
-                });
-
-            modelBuilder.Entity("ControleOKR.Domain.PlanejamentoMetaObjetivos", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<DateTime>("Data")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int?>("ObjetivoId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<double>("Porcentagem")
+                    b.Property<double>("PorcentagemRealizadaDaMeta")
                         .HasColumnType("REAL");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ObjetivoId");
+                    b.HasIndex("EmpresaId");
 
-                    b.ToTable("PlanejamentoMetasObjetivos");
+                    b.ToTable("Objetivos");
                 });
 
             modelBuilder.Entity("ControleOKR.Domain.ResultadoChave", b =>
@@ -123,9 +74,6 @@ namespace ControleOKR.Repository.Migrations
 
                     b.Property<string>("Reponsavel")
                         .HasColumnType("TEXT");
-
-                    b.Property<int?>("ResultadoChaveAtividadeId")
-                        .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 
@@ -159,42 +107,24 @@ namespace ControleOKR.Repository.Migrations
                     b.ToTable("ResultadosChavesAtividades");
                 });
 
-            modelBuilder.Entity("ControleOKR.Domain.Empresa", b =>
-                {
-                    b.HasOne("ControleOKR.Domain.ControleDeOKR", null)
-                        .WithMany("Empresas")
-                        .HasForeignKey("ControleDeOKRId");
-
-                    b.HasOne("ControleOKR.Domain.Objetivo", "Objetivos")
-                        .WithMany()
-                        .HasForeignKey("ObjetivoId");
-                });
-
             modelBuilder.Entity("ControleOKR.Domain.Objetivo", b =>
                 {
-                    b.HasOne("ControleOKR.Domain.ControleDeOKR", null)
+                    b.HasOne("ControleOKR.Domain.Empresa", "Empresa")
                         .WithMany("Objetivos")
-                        .HasForeignKey("ControleDeOKRId");
-                });
-
-            modelBuilder.Entity("ControleOKR.Domain.PlanejamentoMetaObjetivos", b =>
-                {
-                    b.HasOne("ControleOKR.Domain.Objetivo", null)
-                        .WithMany("PlanejamentoMetas")
-                        .HasForeignKey("ObjetivoId");
+                        .HasForeignKey("EmpresaId");
                 });
 
             modelBuilder.Entity("ControleOKR.Domain.ResultadoChave", b =>
                 {
-                    b.HasOne("ControleOKR.Domain.Objetivo", null)
-                        .WithMany("ResultadosChaves")
+                    b.HasOne("ControleOKR.Domain.Objetivo", "Objetivo")
+                        .WithMany()
                         .HasForeignKey("ObjetivoId");
                 });
 
             modelBuilder.Entity("ControleOKR.Domain.ResultadoChaveAtividade", b =>
                 {
-                    b.HasOne("ControleOKR.Domain.ResultadoChave", null)
-                        .WithMany("AtividadesResultadoChave")
+                    b.HasOne("ControleOKR.Domain.ResultadoChave", "ResultadoChave")
+                        .WithMany()
                         .HasForeignKey("ResultadoChaveId");
                 });
 #pragma warning restore 612, 618

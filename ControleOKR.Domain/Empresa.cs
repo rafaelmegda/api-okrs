@@ -8,7 +8,6 @@ namespace ControleOKR.Domain
         public int Id { get; set; }
         public string NomeEmpresa { get; set; }
         public string PropostaValor { get; set; }
-        public int? ObjetivoId { get; set; }
-        public Objetivo Objetivos { get; set; }
+        public IList<Objetivo> Objetivos { get; set; } = new List<Objetivo>();
     }
 }

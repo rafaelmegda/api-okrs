@@ -8,17 +8,17 @@ namespace ControleOKR.Repository.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "ControleDeOKRs",
+                name: "Empresas",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    EmpresaId = table.Column<int>(nullable: true),
-                    ObjetivoId = table.Column<int>(nullable: true)
+                    NomeEmpresa = table.Column<string>(nullable: true),
+                    PropostaValor = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ControleDeOKRs", x => x.Id);
+                    table.PrimaryKey("PK_Empresas", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -28,66 +28,17 @@ namespace ControleOKR.Repository.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     DefinicaoObjetivo = table.Column<string>(nullable: true),
-                    PlanejamentoMetaObjetivosId = table.Column<int>(nullable: true),
-                    ResultadoChaveId = table.Column<int>(nullable: true),
-                    ControleDeOKRId = table.Column<int>(nullable: true)
+                    DataParaMeta = table.Column<DateTime>(nullable: false),
+                    PorcentagemRealizadaDaMeta = table.Column<double>(nullable: false),
+                    EmpresaId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Objetivos", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Objetivos_ControleDeOKRs_ControleDeOKRId",
-                        column: x => x.ControleDeOKRId,
-                        principalTable: "ControleDeOKRs",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Empresas",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    NomeEmpresa = table.Column<string>(nullable: true),
-                    PropostaValor = table.Column<string>(nullable: true),
-                    ObjetivoId = table.Column<int>(nullable: true),
-                    ControleDeOKRId = table.Column<int>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Empresas", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Empresas_ControleDeOKRs_ControleDeOKRId",
-                        column: x => x.ControleDeOKRId,
-                        principalTable: "ControleDeOKRs",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Empresas_Objetivos_ObjetivoId",
-                        column: x => x.ObjetivoId,
-                        principalTable: "Objetivos",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "PlanejamentoMetasObjetivos",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    Data = table.Column<DateTime>(nullable: false),
-                    Porcentagem = table.Column<double>(nullable: false),
-                    ObjetivoId = table.Column<int>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_PlanejamentoMetasObjetivos", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_PlanejamentoMetasObjetivos_Objetivos_ObjetivoId",
-                        column: x => x.ObjetivoId,
-                        principalTable: "Objetivos",
+                        name: "FK_Objetivos_Empresas_EmpresaId",
+                        column: x => x.EmpresaId,
+                        principalTable: "Empresas",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -100,7 +51,6 @@ namespace ControleOKR.Repository.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     DescricaoResultadoChave = table.Column<string>(nullable: true),
                     Reponsavel = table.Column<string>(nullable: true),
-                    ResultadoChaveAtividadeId = table.Column<int>(nullable: true),
                     ObjetivoId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
@@ -137,24 +87,9 @@ namespace ControleOKR.Repository.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Empresas_ControleDeOKRId",
-                table: "Empresas",
-                column: "ControleDeOKRId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Empresas_ObjetivoId",
-                table: "Empresas",
-                column: "ObjetivoId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Objetivos_ControleDeOKRId",
+                name: "IX_Objetivos_EmpresaId",
                 table: "Objetivos",
-                column: "ControleDeOKRId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_PlanejamentoMetasObjetivos_ObjetivoId",
-                table: "PlanejamentoMetasObjetivos",
-                column: "ObjetivoId");
+                column: "EmpresaId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ResultadosChaves_ObjetivoId",
@@ -170,12 +105,6 @@ namespace ControleOKR.Repository.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Empresas");
-
-            migrationBuilder.DropTable(
-                name: "PlanejamentoMetasObjetivos");
-
-            migrationBuilder.DropTable(
                 name: "ResultadosChavesAtividades");
 
             migrationBuilder.DropTable(
@@ -185,7 +114,7 @@ namespace ControleOKR.Repository.Migrations
                 name: "Objetivos");
 
             migrationBuilder.DropTable(
-                name: "ControleDeOKRs");
+                name: "Empresas");
         }
     }
 }

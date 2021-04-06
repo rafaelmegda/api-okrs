@@ -36,8 +36,13 @@ Instalar o EF Global
 Criando as tabelas
 > `dotnet ef migrations add init`
 
+> `dotnet ef --startup-project ../Cadastro-taxas.API migrations add init`
+
 Criando o banco de dados
 > `dotnet ef database update`
+
+> `dotnet ef --startup-project ../Cadastro-taxas.API database update`
+
 
 Removendo as Migrations
 > `dotnet ef migrations remove`
