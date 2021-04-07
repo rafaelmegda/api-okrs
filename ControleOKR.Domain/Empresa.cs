@@ -10,4 +10,5 @@ namespace ControleOKR.Domain
         public string PropostaValor { get; set; }
         public IList<Objetivo> Objetivos { get; set; } = new List<Objetivo>();
     }
+    
 }
