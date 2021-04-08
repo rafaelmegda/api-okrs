@@ -31,6 +31,7 @@ namespace Cadastro_taxas.API
             services.AddDbContext<ControleOKRContext>(
                 x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection")
             ));
+            services.AddScoped<IControleOKRRepository, ControleOKRRepository>();
             services.AddControllers();
             services.AddCors();
             services.AddSwaggerGen(c =>

@@ -1,5 +1,7 @@
+using System.Linq;
 using System.Threading.Tasks;
 using ControleOKR.Domain;
+using Microsoft.EntityFrameworkCore;
 
 namespace ControleOKR.Repository
 {
@@ -35,18 +37,58 @@ namespace ControleOKR.Repository
         }
 
         //EMPRESAS
-        public Task<Empresa[]> GetAllEmpresaAsyncByNome(string nome, bool inluirObjetivos)
+        
+        public async Task<Empresa[]> GetAllEmpresasAsync(bool incluirObjetivos = false)
         {
-            throw new System.NotImplementedException();
+            IQueryable<Empresa> query = _context.Empresas
+                .Include(e => e.NomeEmpresa)
+                .Include(e => e.PropostaValor);
+
+            // if(incluirObjetivos)
+            // {
+            //     query = query
+            //         .Include(o => o.Objetivos);
+            // }
+
+            query = query.OrderByDescending(e => e.NomeEmpresa);
+
+            return await query.ToArrayAsync();
         }
 
-        public Task<Empresa[]> GetAllEmpresasAsync(bool incluirObjetivos)
+        public async Task<Empresa[]> GetAllEmpresaAsyncByNome(string nomeEmpresa, bool incluirObjetivos)
         {
-            throw new System.NotImplementedException();
+            IQueryable<Empresa> query = _context.Empresas
+                .Include(e => e.NomeEmpresa)
+                .Include(e => e.PropostaValor);
+
+            if(incluirObjetivos)
+            {
+                query = query
+                    .Include(o => o.Objetivos);
+            }
+
+            query = query.OrderByDescending(e => e.NomeEmpresa)
+                .Where(e => e.NomeEmpresa.ToLower().Contains(nomeEmpresa.ToLower()));
+
+            return await query.ToArrayAsync();
         }
-        public Task<Empresa> GetEmpresaAsyncById(int EmpresaId, bool incluirObjetivos)
+
+        public async Task<Empresa> GetEmpresaAsyncById(int EmpresaId, bool incluirObjetivos)
         {
-            throw new System.NotImplementedException();
+            IQueryable<Empresa> query = _context.Empresas
+                .Include(e => e.NomeEmpresa)
+                .Include(e => e.PropostaValor);
+
+            if(incluirObjetivos)
+            {
+                query = query
+                    .Include(o => o.Objetivos);
+            }
+
+            query = query.OrderByDescending(e => e.NomeEmpresa)
+                .Where(e => e.Id == EmpresaId);
+
+            return await query.FirstOrDefaultAsync();
         }
 
         //OBJETIVOS
