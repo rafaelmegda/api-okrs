@@ -1,8 +1,8 @@
-# Projeto Estudo .Net API Core
+# Projeto Estudo .Net API Core (Em desenvolvimento)
 
 Este projeto é de estudo para desenvolver uma API utilizando .Net Core usando o VSCode sendo consumida pelo front Angular em AWS.
 
-Afim de auxiliar no processo de desenvolvimento, irei listar os passos para serem registrados e posteriormente auxiliar outros developers a também desenvolverem suas API's.
+Afim de auxiliar no processo de desenvolvimento, irei listar os passos para serem registrados e posteriormente auxiliar outros developers a também desenvolverem suas API's. (Em Organização)
 
 ## Instalar .NetCore API
 
